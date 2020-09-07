@@ -1,27 +1,27 @@
-replaceText(document.body)
-var data=document.getElementsByTagName("P");
+// replaceText(document.body)
+// var data=document.getElementsByTagName("P");
 
-[...data].forEach(data=>{
-    console.log(data.innerText)
-})
+// [...data].forEach(data=>{
+//     console.log(data.innerText)
+// })
 
-function replaceText(element){
-    if(element.hasChildNodes()){
-        element.childNodes.forEach(replaceText) 
-       }
+// function replaceText(element){
+//     if(element.hasChildNodes()){
+//         element.childNodes.forEach(replaceText) 
+//        }
 
-        else if(element.nodeType===Text.TEXT_NODE){
+//         else if(element.nodeType===Text.TEXT_NODE){
 
-        
-           // if(element.textContent.match(/coronavirus/gi)){
-               // element.parentElement.style.color = 'black'
-            //    element.parentElement.style.backgroundColor = 'black'
-           // }
-                //element.textContent= element.textContent.replace(/coronavirus/gi,'DEMO')
-        }
+//         //FOR DEMO
+//            if(element.textContent.match(/coronavirus/gi)){
+//                element.parentElement.style.color = 'black'
+//                element.parentElement.style.backgroundColor = 'black'
+//            }
+//                 element.textContent= element.textContent.replace(/coronavirus/gi,'DEMO')
+//         }
 
 
-}
+// }
 
 
 // chrome.runtime.onMessage.addListener(function(request,sender,response){
@@ -40,4 +40,20 @@ function replaceText(element){
 // }
 
 
+
+
+window.addEventListener('mouseup',dataSelected);
+
+ function dataSelected(){
+     let selectedText=window.getSelection().toString();
+     console.log(selectedText)
+
+ 
+     if(selectedText.length>0){
+        let message={
+            text:selectedText
+        }         
+        chrome.runtime.sendMessage(message);
+     }
+ }
 
