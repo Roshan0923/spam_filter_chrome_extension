@@ -11,6 +11,8 @@
 
 **Spam Checker** is chrome browser extension that allow the user to check, whether the content of the website contain spam text or not.The user needs to just select the text and the extension will automatically fetch the text and provide the feedback about the text.The extension also allow the user to paste the content to the TextArea which will help the user to lidentify spam text in word or any other documents.
 
+![](images/spamChecker01.png)
+
 #### Language used :
 The majority of code is written in Javascript and for stylying the content i ahve used html and bootstrap.
 
